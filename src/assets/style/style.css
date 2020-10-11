@@ -1,0 +1,116 @@
+
+
+/* BACKGROUND-COLOR */
+.bg-success {
+    background-color : green;
+}
+
+.bg-danger {
+    background-color : red;
+}
+
+.bg-primary {
+    background-color : blue;
+}
+
+.bg-pink {
+    background-color : pink;
+}
+
+.bg-white {
+    background-color : white;
+}
+
+.bg-black {
+    background-color : black;
+}
+
+.bg-grey {
+    background-color: #acacac;
+}
+
+.bg-matte-black {
+    background-color : #444444;
+}
+
+
+/* TEXT-COLOR */
+
+.txt-success {
+    color : green;
+}
+
+.txt-danger {
+    color : red;
+}
+
+.txt-primary {
+    color : blue;
+}
+
+.txt-pink {
+    color : pink;
+}
+
+.txt-white {
+    color : white;
+}
+
+.txt-black {
+    color : #222222;
+}
+
+
+
+/* Border Color */
+
+.border-success {
+    border-color : green;
+}
+
+.border-danger {
+    border-color : red;
+}
+
+.border-primary {
+    border-color : blue;
+}
+
+.border-pink {
+    border-color : pink;
+}
+
+.border-white {
+    border-color : white;
+}
+
+.border-black {
+    border-color : black;
+}
+
+.line-black {
+    height: 4px;
+    width : 100%;
+    background-color : #444444;
+}
+
+
+
+.shiki__meta {
+    color : white;
+    display : flex;
+    justify-content: space-between;
+    font-family : 'Poppins',sans-serif;
+    font-size : 18px;
+    font-weight : 700;
+    padding-bottom : 1rem;
+
+ }
+
+ .shiki__language {
+    color : #38fc83;
+  }
+
+.shiki__filename {
+    color : #2f89ff;
+}
