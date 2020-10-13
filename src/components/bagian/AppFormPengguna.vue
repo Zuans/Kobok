@@ -1,6 +1,6 @@
 <template>
     <div class="form-bagian-pengguna">
-        <h1>Login</h1>
+        <h1 class="title-pengguna">Login</h1>
         <div class="input-masuk d-flex align-item-center justify-content-center mt-5">
             <FormInput name="masuk" @inputMasuk="simpanInput($event,'loginInput')" label="Masuk" txtColor="black" bgColor="white" class="pengguna-form mr-5 "/>
             <MyButton name="masuk"  @btn-click="loginDiKlik" bgColor="success" txtColor="white" ><p>Masuk</p></MyButton>
@@ -65,7 +65,7 @@ export default {
     .form-bagian-pengguna {
         background-color: #2eb9d1;
         border-bottom: 4px solid #1a1818;
-        padding : 2rem
+        padding : 2rem;
     }
 
     .pengguna-form {
@@ -75,4 +75,10 @@ export default {
     .pengguna-btn {
         display :inline;
     }
+
+    .title-pengguna {
+        color : #fff8f8;
+        font-weight: bold;
+    }
+
 </style>

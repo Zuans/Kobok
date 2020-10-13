@@ -4,9 +4,10 @@
         <AppNotifikasi v-if="tampilNotif" />
     </transition>
     <div class="header">
-      <h1>Welcome to Kobok</h1>
-      <h3>- Kode Boks -</h3>
+      <h1 class="header-left">Welcome to</h1>
+      <h1 class="header-right" >Kobok</h1>
     </div>
+      <h3 class="sub-header">- Kode Boks -</h3>
     <BagianFormPengguna  v-if="!user.logIn" />
     <BagianInfoUser v-else />
     <BagianKodeForm />
@@ -81,5 +82,24 @@ export default {
 .notif-enter, .notif-leave-to {
   transform: translateY(-200px);
 }
+
+.header {
+  display : flex;
+  justify-content : center;
+  margin-bottom  : 1rem;
+}
+
+
+.header-right {
+  margin-left : 1rem;
+  font-weight : bold;
+  color : #1a80af;
+  border-bottom  : 4px solid #464646;
+}
+
+.sub-header {
+  margin-bottom : 1rem;
+}
+
 
 </style>

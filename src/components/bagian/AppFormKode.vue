@@ -3,7 +3,7 @@
       <h1>Code</h1>
       <div class="line-black mx-auto mt-3 w-25"></div>
       <div class="body-kode">
-        <h3>Tolong isi semua</h3>
+        <h3>Pastikan semua bagian telah terisi!</h3>
         <div class="container-content">
           <div class="form-wrapper">
             <form action="">
