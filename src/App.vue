@@ -93,7 +93,7 @@ export default {
 .header-right {
   margin-left : 1rem;
   font-weight : bold;
-  color : #1a80af;
+  color : #269bd1;
   border-bottom  : 4px solid #464646;
 }
 
