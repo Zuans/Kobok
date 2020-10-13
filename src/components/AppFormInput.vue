@@ -2,21 +2,48 @@
   <div class="form-input">
       <!-- If type is textarea -->
       <div v-if="formType == 'textarea'" :class="`form-type-${formType}`" >
-          <label :for="name" class="mr-3" :class="`txt-${labelColor}`" >{{ label }} :</label>
-          <textarea v-model="textMasuk"  :name="name" :id="name" cols="30" rows="10" :class="`border-${borderColor} bg-${bgColor} txt-${txtColor}`"></textarea>
+          <label 
+            :for="name" 
+            class="mr-3" 
+            :class="`txt-${labelColor}`" 
+          >{{ label }} :</label>
+          <textarea 
+           v-model="textMasuk"  
+           :name="name" 
+           :id="name" 
+           cols="30" 
+           rows="10" 
+           :class="`border-${borderColor} 
+           bg-${bgColor} 
+           txt-${txtColor}`">
+        </textarea>
       </div>
       <!-- If type is options -->
-      <div v-else-if="formType == 'options'" :class="`form-type-${formType}`" >
-        <label :for="name" class="mr-3" :class="`txt-${labelColor}`" >{{ label }} :</label>
+      <div 
+        v-else-if="formType == 'options'" 
+        :class="`form-type-${formType}`" >
+        <label 
+            :for="name" 
+            class="mr-3" 
+            :class="`txt-${labelColor}`" 
+        >{{ label }} :</label>
         <select :name="name" v-model=" opsi" id="name">
             <option value="null">{{ label }}</option>
-            <option v-for="(opsi,index) in dataOpsi" :key="index" :value="opsi">{{ opsi }}</option>
+            <option 
+                v-for="(opsi,index) in dataOpsi" 
+                :key="index" 
+                :value="opsi"
+            >{{ opsi }}</option>
         </select>
       </div>
       <!-- If type is text or something similar -->
       <div v-else :class="`form-type-${formType}`">
           <label :for="name" :class="`txt-${labelColor}`" >{{ label }}:</label>
-          <input v-model="textMasuk"   :type="formType" :class="`border-${borderColor} bg-${bgColor} txt-${txtColor}`" >
+          <input 
+            v-model="textMasuk"   
+            :type="formType" 
+            :class="`border-${borderColor} bg-${bgColor} txt-${txtColor}`" 
+          >
      </div>  
   </div>
 </template>

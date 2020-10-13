@@ -3,11 +3,11 @@
     <transition name="notif">
         <AppNotifikasi v-if="tampilNotif" />
     </transition>
-    <div class="header">
-      <h1 class="header-left">Welcome to</h1>
-      <h1 class="header-right" >Kobok</h1>
+    <div class="title">
+      <h1 class="title-left">Welcome to</h1>
+      <h1 class="title-right" >Kobok</h1>
     </div>
-      <h3 class="sub-header">- Kode Boks -</h3>
+    <h3 class="sub-header">- Kode Boks -</h3>
     <BagianFormPengguna  v-if="!user.logIn" />
     <BagianInfoUser v-else />
     <BagianKodeForm />
@@ -83,21 +83,21 @@ export default {
   transform: translateY(-200px);
 }
 
-.header {
+.title {
   display : flex;
   justify-content : center;
   margin-bottom  : 1rem;
 }
 
 
-.header-right {
+.title-right {
   margin-left : 1rem;
   font-weight : bold;
   color : #269bd1;
   border-bottom  : 4px solid #464646;
 }
 
-.sub-header {
+.sub-title {
   margin-bottom : 1rem;
 }
 

@@ -40,7 +40,6 @@ export default {
         background-color : #11ac57;
         text-align : left;
         color : white;
-        border-top : 4px solid #1a1818;
         border-bottom: 4px solid #1a1818;
     }
 </style>
