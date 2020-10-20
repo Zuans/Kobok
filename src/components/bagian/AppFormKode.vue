@@ -8,55 +8,57 @@
           <div class="form-wrapper">
             <form action="">
               <AppFormInput 
-                  name="input-namaFile" 
-                  :value="form.namaFile" 
-                  formType="text"     
-                  @inputMasuk="testInput($event,'namaFile')"  
-                  label="Nama File" 
-                  bgColor="white"
-                  txtColor="black"
-                />
+                name="input-namaFile" 
+                :value="form.namaFile" 
+                formType="text"     
+                @inputMasuk="testInput($event,'namaFile')"  
+                label="Nama File" 
+                bgColor="white"
+                txtColor="black"
+              />
               <AppFormInput 
-                  name="input-bahasa"   
-                  formType="options"  
-                  @inputMasuk="testInput($event,'bhsProgram')"   
-                  :value="form.bhsProgram"     
-                  :dataOpsi="dataOpsi"  
-                  label="Bahasa Program" 
-                />
+                name="input-bahasa"   
+                formType="options"  
+                @inputMasuk="testInput($event,'bhsProgram')"   
+                :value="form.bhsProgram"     
+                :dataOpsi="dataOpsi"  
+                label="Bahasa Program" 
+              />
               <AppFormInput name="input-kode" 
-                  formType="textarea" 
-                  @inputMasuk="testInput($event,'kode')"         
-                  :value="form.kode"           
-                  label="Kode" 
-                  bgColor="matte-black" 
-                  txtColor="white" 
-                  cols="20" 
-                  rows="5"  
-                />
+                formType="textarea" 
+                @inputMasuk="testInput($event,'kode')"         
+                :value="form.kode"           
+                label="Kode" 
+                bgColor="matte-black" 
+                txtColor="white" 
+                cols="20" 
+                rows="5"  
+              />
           </form>
           <div class="btn-form">
               <AppTombol 
                 @btn-click="resetDiKlik($event)"  
                 bgColor="danger"  
-                txtColor="white">
+                txtColor="white"
+              >
                 <p>Reset</p>
               </AppTombol>
               <AppTombol 
-                  @btn-click="unduhDiKlik($event)"  
-                  bgColor="primary" 
-                  txtColor="white" 
-                  v-if="hasilKode != ''"
-                  >
-                  <p>Unduh</p>
+                @btn-click="unduhDiKlik($event)"  
+                bgColor="primary" 
+                txtColor="white" 
+                v-if="hasilKode !='' "
+              >
+                <p>Unduh</p>
               </AppTombol>
               <AppTombol 
-                  @btn-click="simpanDiKlik($event)" 
-                  bgColor="success" 
-                  txtColor="white" 
-                  v-if="$store.state.pengguna.user.logIn && hasilKode != '' " >
-                  <p>Simpan</p>
-                </AppTombol>
+                @btn-click="simpanDiKlik($event)" 
+                bgColor="success" 
+                txtColor="white" 
+                v-if="$store.state.pengguna.user.logIn && hasilKode != '' "
+              >
+                <p>Simpan</p>
+              </AppTombol>
             </div>
           </div>
           <div class="container-highlight">
@@ -75,6 +77,7 @@ import debounce from 'debounce';
 import API_URL from '@/constant/index';
 import { mapActions } from 'vuex';
 import { ambilData, kirimData, unduhKode } from '@/utils/index';
+
 export default {
     name : 'formBagianKode',
     components : {

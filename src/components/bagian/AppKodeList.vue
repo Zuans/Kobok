@@ -6,11 +6,14 @@
           <AppTombol
             :disabled="disabled.sebelumnya"  
             @btn-click="sebelumDiKlik" 
-          >Sebelumnya</AppTombol>
+          >
+            <p>Sebelumnya</p>
+          </AppTombol>
           <AppTombol 
             :disabled="disabled.selanjutnya"   
             @btn-click="selanjutDiKlik" 
-          >Selanjutnya
+          >
+            <p>Selanjutnya</p>
           </AppTombol>
       </div>
       <div class="list-kode-grid">
@@ -28,9 +31,7 @@
 
 <script>
 import { mapActions } from 'vuex'
-// import { mapState } from 'vuex';
-// import { kirimData } from '@/utils/index';
-// import API_URL from '@/constant/index';
+
 export default {
     name : 'appListKode',
     components : {

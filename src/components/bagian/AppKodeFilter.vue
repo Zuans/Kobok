@@ -28,6 +28,7 @@
 <script>
 import debounce from 'debounce';
 import { mapActions} from 'vuex';
+
 export default {
     name : 'appFilterKode',
     components : {

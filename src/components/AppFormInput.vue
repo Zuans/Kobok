@@ -6,43 +6,53 @@
             :for="name" 
             class="mr-3" 
             :class="`txt-${labelColor}`" 
-          >{{ label }} :</label>
+          >
+            {{ label }} :
+          </label>
           <textarea 
-           v-model="textMasuk"  
-           :name="name" 
-           :id="name" 
-           cols="30" 
-           rows="10" 
-           :class="`border-${borderColor} 
-           bg-${bgColor} 
-           txt-${txtColor}`">
-        </textarea>
+            v-model="textMasuk"  
+            :name="name" 
+            :id="name" 
+            cols="30" 
+            rows="10" 
+            :class="`border-${borderColor} 
+            bg-${bgColor} 
+            txt-${txtColor}`"
+          >
+          </textarea>
       </div>
       <!-- If type is options -->
       <div 
         v-else-if="formType == 'options'" 
-        :class="`form-type-${formType}`" >
+        :class="`form-type-${formType}`"
+      >
         <label 
             :for="name" 
             class="mr-3" 
             :class="`txt-${labelColor}`" 
-        >{{ label }} :</label>
+        >
+            {{ label }} :
+        </label>
         <select :name="name" v-model=" opsi" id="name">
             <option value="null">{{ label }}</option>
             <option 
                 v-for="(opsi,index) in dataOpsi" 
                 :key="index" 
                 :value="opsi"
-            >{{ opsi }}</option>
+            >
+                {{ opsi }}
+            </option>
         </select>
       </div>
       <!-- If type is text or something similar -->
       <div v-else :class="`form-type-${formType}`">
-          <label :for="name" :class="`txt-${labelColor}`" >{{ label }}:</label>
-          <input 
-            v-model="textMasuk"   
-            :type="formType" 
-            :class="`border-${borderColor} bg-${bgColor} txt-${txtColor}`" 
+            <label :for="name" :class="`txt-${labelColor}`">
+                {{ label }}:
+            </label>
+            <input 
+               v-model="textMasuk"   
+               :type="formType" 
+               :class="`border-${borderColor} bg-${bgColor} txt-${txtColor}`" 
           >
      </div>  
   </div>
@@ -50,6 +60,7 @@
 
 <script>
 import { elStyle } from '../mixins/index';
+
 export default {
     name : 'formInput',
     props : {

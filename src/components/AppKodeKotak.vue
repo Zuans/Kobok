@@ -4,7 +4,9 @@
         <AppTombol 
             @btn-click="hapusKode(kodeId)"
             bgColor="danger"
-        >Delete</AppTombol>
+        >
+            <p>Delete</p>
+        </AppTombol>
   </div>
 </template>
 
@@ -12,6 +14,7 @@
 import { mapActions }  from 'vuex';
 import API_URL from '@/constant/index';
 import { kirimData } from '@/utils/index';
+
 export default {
     name : 'appKodeKotak',
     components : {

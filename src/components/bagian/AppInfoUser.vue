@@ -1,7 +1,11 @@
 <template>
   <div class="info-user">
       <h1>Hi, Welcome {{ user.name }}</h1>
-      <AppButton @btn-click="logoutUser" txtColor="white" bgColor="danger">
+      <AppButton 
+        @btn-click="logoutUser" 
+        txtColor="white" 
+        bgColor="danger"
+      >
           <p>Logout</p>
       </AppButton>
   </div>
@@ -9,6 +13,7 @@
 
 <script>
 import { mapState,mapActions } from 'vuex';
+
 export default {
     name : 'infoUser',
     components : {
